@@ -7,7 +7,6 @@ import time
 import subprocess
 import sys
 import requests
-import requests
 import datetime
 import logging
 import socket
